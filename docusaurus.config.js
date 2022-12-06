@@ -80,9 +80,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'whitepaper',
+            docId: 'home',
             position: 'left',
-            label: 'Whitepaper',
+            label: 'Home',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -99,8 +99,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Whitepaper',
-                to: '/docs/whitepaper',
+                label: 'Home',
+                to: '/docs/home',
               },
             ],
           },
