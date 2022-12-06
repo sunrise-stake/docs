@@ -75,7 +75,7 @@ const config = {
         title: 'SunriseStake',
         logo: {
           alt: 'SunriseStake Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
