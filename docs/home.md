@@ -28,7 +28,6 @@ Regenerative economics is a theoretical framework for understanding and guiding 
 
 This approach to economics emphasizes the importance of building and maintaining healthy ecosystems and communities, and views economic activity as a means to that end rather than an end in itself.
 
-
 ### What are the benefits of staking with Sunrise Stake?
 
 #### Supporting carbon offset projects comes at no cost
@@ -91,28 +90,28 @@ Let’s take a deep dive into what happens when you deposit your SOL with Sunris
 The staking process begins with you depositing your SOL via Sunrise Stake’s app.
 
 Your SOL will be deposited in Sunrise Stake’s Treasury Account, which is controlled by a smart contract (called Treasury Controller). 
-The Treasury Account is a Programme Derived Account (PDA) that is controlled by a smart contract called Treasury Controller; this means that only Treasury Controller can move the funds in the Treasury Account.
+The Treasury Account is a Programme Derived Account (PDA) that is controlled by the Treasury Controller program; this means that only the Treasury Controller program can move the funds in the Treasury Account.
 
 When you deposit your SOL, you will also receive an equivalent amount of gSOL in your wallet.
 You can either keep your gSOL in your wallet, or use it on platforms that support it.
 
 #### Step 2: Sending your SOL to a staking protocol
-Once your SOL is deposited, Treasury Controller will send your SOL from the Treasury Account to non-custodial liquid staking protocols such as Marinade Finance (Marinade) and SolBlaze.                                        
+Once your SOL is deposited, the Treasury Controller program will send your SOL from the Treasury Account to non-custodial liquid staking protocols such as Marinade Finance (Marinade) and SolBlaze.                                        
 
 Treasury Controller will stake your SOL in:
 1. Marinade's stake pool 
 2. Solblaze's stake pool - called BlazeStake 
 3. Marinade's liquidity pool 
 
-_NOTE_: Sunrise Stake has future plans to integrate other staking protocols (in addition to Marinade and SolBlaze).
+_NOTE_: Sunrise Stake has future plans to integrate other non-custodial staking protocols (in addition to Marinade and SolBlaze).
  
 ##### Stake Pool 
-When Treasury Controller stakes your SOL in Marinade's stake pool, Marinade mints an amount of msOL tokens (Marinade Staked SOL tokens) which represents the size of your holding of the stake pool, which is redeemable for SOL.
+When Treasury Controller stakes your SOL in Marinade's stake pool, Marinade mints an amount of msOL tokens (Marinade Staked SOL tokens) representing the size of your holding of the stake pool, which is redeemable for SOL.
 
 For example, if Marinade's stake pool contains 20 SOL and the total minted mSOL is 10, then if you add 1 SOl, Marinade mints something like (1/20) * 10 = 0.5 mSOL. 
 The stake pool size is now 21, you hold 0.5 out of a total 10.5 mSOL, so you own (0.5 / 10.5) of the pool of 21 sol, which equals 1 SOL.
 
-The staking process for SolBlaze is the same as above; when Treasury Controller stakes your SOL into BlazeStake's stake pool (BlazeStake is), when Sunrise stakes your SOL, Sunrise receives bSOL tokens (BlazeStake Staked SOL tokens) relative to your SOL's size of the stake pool. Just like mSOL, bSOL is redeemable for SOL.
+The staking process for SolBlaze is the same as above; when the Treasury Controller program stakes your SOL into BlazeStake's stake pool, Sunrise receives bSOL tokens (BlazeStake Staked SOL tokens) relative to your SOL's size of the stake pool. Just like mSOL, bSOL is redeemable for SOL.
 
 ##### Liquidity Pool 
 2.  A  mSOL/SOL unstake pool - through which Sunrise becomes a liquidity provider to Marinade
@@ -149,16 +148,11 @@ Until sufficient liquidity is present on Solana for NCT, Sunrise is maintaining 
 ## Governance
 :::tip
 
-Governance for Sunrise Stake is planned for 2023. Stay tuned!
-
-:::
 ### How is Sunrise Stake governed?
 
-Sunrise Stake is governed by the [Sunrise Stake DAO](https://app.realms.today/realm/SunriseStake), running on the Realms platform.
-### How can I participate in governance?
-### How can I propose a change?
-### How can I vote?
-### How can I delegate my vote?
+Sunrise Stake will be governed by the [Sunrise Stake DAO](https://app.realms.today/realm/SunriseStake), running on the Realms platform.
+Via Realms you'll be able to participate in governance, propose changes, vote and delegate your vote.
+
 
 ## Security
 
@@ -168,7 +162,7 @@ Non-custodial means that your SOL is always under your control, you retain your 
 Permissionless means that the protocol can be used by you or anyone else, without any interaction from the Sunrise team.
 
 
-##FAQs
+##Other Questions
 ### I am interested in integrating gSOL into my project, how can I do that?
 
 gSOL is a standard SPL token, and can be integrated into any project that supports SPL tokens.
