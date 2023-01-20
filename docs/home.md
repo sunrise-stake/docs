@@ -17,8 +17,8 @@ Sunrise Stake is a ReFi staking protocol that directs staking yield to climate-p
 
 At Sunrise Stake we believe in the power of Regenerative Finance to create positive outcomes for people and the planet.
 So we’ve created a non-custodial and permissionless protocol to send the yield earned through staking SOL towards retiring carbon tokens and other climate-positive projects.
-Sunrise Stake is one of the first ReFi 
-projects on the Solana blockchain; we provide a seamless way for holders of SOL to participate in the ReFi movement, while simultaneously strengthening the Solana blockchain.
+Sunrise Stake is one of the first ReFi projects on the Solana blockchain; we provide a seamless way for holders of SOL to participate in the ReFi movement, while simultaneously strengthening the Solana blockchain.
+
 
 ### What is ReFi?
 
@@ -87,7 +87,6 @@ underlying [Marinade Finance protocol](https://docs.marinade.finance/faq/faq#wha
 ### A Deep Dive into the Staking Process
 Let’s take a deep dive into what happens when you deposit your SOL with Sunrise Stake
 
-
 #### Step 1: Depositing SOL with Sunrise Stake
 The staking process begins with you depositing your SOL via Sunrise Stake’s app.
 
@@ -97,23 +96,35 @@ The Treasury Account is a Programme Derived Account (PDA) that is controlled by 
 When you deposit your SOL, you will also receive an equivalent amount of gSOL in your wallet.
 You can either keep your gSOL in your wallet, or use it on platforms that support it.
 
-#### Step 2: Treasury Controller sends your SOL to a staking protocol
-Treasury Controller sends your SOL to a staking protocol such as Marinade Finance.
-Sunrise Stake is integrating other staking protocols such as SolBlaze, so in the future, your SOL will be sent to a greater number of staking protocols.
+#### Step 2: Sending your SOL to a staking protocol
+Once your SOL is deposited, Treasury Controller will send your SOL from the Treasury Account to non-custodial liquid staking protocols such as Marinade Finance (Marinade) and SolBlaze.                                        
 
-Marinade's non-custodial liquid staking protocol consists of:
-1. A stake pool
-Staking SOL against validators (in Marinade’s stake Pool)
+Treasury Controller will stake your SOL in:
+1. Marinade's stake pool 
+2. Solblaze's stake pool - called BlazeStake 
+3. Marinade's liquidity pool 
 
-2. A liquidity pool
-The liquidity pool is made up of mSOL & SOL
+_NOTE_: Sunrise Stake has future plans to integrate other staking protocols (in addition to Marinade and SolBlaze).
+ 
+##### Stake Pool 
+When Treasury Controller stakes your SOL in Marinade's stake pool, Marinade mints an amount of msOL tokens (Marinade Staked SOL tokens) which represents the size of your holding of the stake pool, which is redeemable for SOL.
 
+For example, if Marinade's stake pool contains 20 SOL and the total minted mSOL is 10, then if you add 1 SOl, Marinade mints something like (1/20) * 10 = 0.5 mSOL. 
+The stake pool size is now 21, you hold 0.5 out of a total 10.5 mSOL, so you own (0.5 / 10.5) of the pool of 21 sol, which equals 1 SOL.
 
-                                                                                                                                        
+The staking process for SolBlaze is the same as above; when Treasury Controller stakes your SOL into BlazeStake's stake pool (BlazeStake is), when Sunrise stakes your SOL, Sunrise receives bSOL tokens (BlazeStake Staked SOL tokens) relative to your SOL's size of the stake pool. Just like mSOL, bSOL is redeemable for SOL.
 
+##### Liquidity Pool 
+2.  A  mSOL/SOL unstake pool - through which Sunrise becomes a liquidity provider to Marinade
+The liquidity pool is made up of SOL, mSOL and Liquidity Pool tokens
 
+  
+#### Step 3: Accruing yield on staked SOL
 
+#### Step 4: Marinade sends minted mSOL to Treasury Controller
+i.e. Marinade “swaps” the SOL sent by Sunrise with the mSOL from Marinade’s Stake Pool
 
+                                                                                   
 ## Sunrise Stake treasury spending 
 
 Thanks to the yield earned in the staking process, Sunrise can purchase carbon tokens and burn them to offset carbon emissions. 
@@ -165,6 +176,19 @@ gSOL is a standard SPL token, and can be integrated into any project that suppor
 The gSOL token address is `gso12BFMxXD7RJaTUFfZZyuLW32M1hA9LoLZN7u9Und`.
 
 You can convert the gSOL back to SOL either by unstaking it manually in the Sunrise Stake app, through the upcoming JS library, or directly via the protocol itself.
+
+### Why is Sunrise staking with Marinade and SolBlaze?
+Marinade and SolBlaze offer: 
+
+#### Enhanced Decentralisation
+Usually when you stake SOL, your SOL is staked against to a single validator account, however Marinade and SolBlaze distribute staked SOL to a wide network of hundreds of validators (and growing!).
+Thus staking with Marinade and SolBlaze (and similar staking protocols) makes the Solana blockchain more decentralised, secure and censorship resistant, as it is harder for validators to stage a 51% attack or have control over how transactions are validated.
+
+#### Liquid unstaking
+- This means users receive funds immediately
+- Normally unstaking is delayed - one has to wait until the end of the epoch (on average 2 days) to receive funds
+
+In the future, Sunrise plans to stake with other non-custodial liquid staking protocols.
 
 ### I am a validator, how can I get involved?
 
