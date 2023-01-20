@@ -39,9 +39,13 @@ The gSOL to SOL ratio is always 1:1 thus stakers experience no fund loss in the 
 
 #### Transparent unstaking 
 
-The deposited stake retains full liquidity and can be traded back to SOL by the user any time. At present, no fees (beyond the solana network fee of 5000 lamports) apply to unstaking high values when the user withdraws with a delay of 2-3 days, otherwise a fee of 0.3% is incurred for immediate withdrawals. This is done to secure sufficient liquidity of the staking pool. 
+The deposited stake retains full liquidity and can be traded back to SOL by  the user any time. At present, no fees (beyond the solana network fee of 5000 lamports) apply to unstaking high values when the user withdraws with a delay of 2-3 days, otherwise a fee of 0.3% is incurred for immediate withdrawals. This is done to secure sufficient liquidity of the staking pool. 
 
-_NOTE_: In the future, Sunrise Stake aims at offering entirely feeless liquid unstaking.
+#### Liquid Staking
+Liquid staking is a method of staking that allows stakers to unstake without the typical 2-3 day withdrawal period.
+Sunrise proxies the [Marinade Finance](https://docs.marinade.finance/) protocol, which allows liquid staking through the use of liquidity pools.
+
+_NOTE_: In the future, Sunrise Stake aims at offering entirely feeless liquid unstaking. Sunrise will also proxy additional staking protocols.
 
 #### Strengthening the Solana Ecosystem
 Our protocol also secures and decentralizes the Solana blockchain; staking your SOL with liquid staking protocols such as Marinade Finance and Solblaze means that your SOL is distributed to a wider network of validators.
@@ -53,7 +57,6 @@ The decision to unstake is entirely up to the user however the accrued yield is 
 
 
 ### What are carbon tokens?
-
 Carbon tokens serve a similar purpose as carbon credits by allowing individuals and institutions to offset their carbon emissions by purchasing tokens from projects that decrease greenhouse gas emissions. When these tokens are burned, they are permanently removed from circulation and can no longer be used to offset carbon. Sunrise Stake realises climate impact by purchasing carbon tokens thanks to the yield accrued via staking. 
 
 ### How to Stake?
@@ -87,50 +90,29 @@ Let’s take a deep dive into what happens when you deposit your SOL with Sunris
 
 #### Step 1: Depositing SOL with Sunrise Stake
 The staking process begins with you depositing your SOL via Sunrise Stake’s app.
-Your SOL will be deposited in Sunrise Stake’s Treasury Account, which is controlled by a smart contract. 
+
+Your SOL will be deposited in Sunrise Stake’s Treasury Account, which is controlled by a smart contract (called Treasury Controller). 
+The Treasury Account is a Programme Derived Account (PDA) that is controlled by a smart contract called Treasury Controller; this means that only Treasury Controller can move the funds in the Treasury Account.
 
 When you deposit your SOL, you will also receive an equivalent amount of gSOL in your wallet.
-You can either keep your gSOL in your wallet, or use yon platforms that support it.
+You can either keep your gSOL in your wallet, or use it on platforms that support it.
 
-#### Step 2: SunriseStake sends your SOL to a staking platform
+#### Step 2: Treasury Controller sends your SOL to a staking protocol
+Treasury Controller sends your SOL to a staking protocol such as Marinade Finance.
+Sunrise Stake is integrating other staking protocols such as SolBlaze, so in the future, your SOL will be sent to a greater number of staking protocols.
 
-Once your SOL is deposited, Sunrise Stake’s smart contract will send it to a staking platform such as Marinade Finance. 
-In the future, Sunrise Stake will be sending SOL to additional stake pools such as SolBlaze.
+Marinade's non-custodial liquid staking protocol consists of:
+1. A stake pool
+Staking SOL against validators (in Marinade’s stake Pool)
 
-
-
-### What is Liquid Staking?
-
-Liquid staking is a method of staking that allows stakers to unstake without the typical 2-3 day withdrawal period.
-
-Sunrise proxies the [Marinade Finance](https://docs.marinade.finance/) protocol, which allows liquid staking through the use of liquidity pools.
+2. A liquidity pool
+The liquidity pool is made up of mSOL & SOL
 
 
+                                                                                                                                        
 
-### I am interested in integrating gSOL into my project, how can I do that?
 
-gSOL is a standard SPL token, and can be integrated into any project that supports SPL tokens.
 
-The gSOL token address is `gso12BFMxXD7RJaTUFfZZyuLW32M1hA9LoLZN7u9Und`.
-
-You can convert the gSOL back to SOL either by unstaking it manually in the Sunrise Stake app, through the upcoming JS library, or directly via the protocol itself.
-
-### I am a validator, how can I get involved?
-
-In conjunction with the [Solana Foundation](https://solana.org/), we are exploring establishing a green stake pool, composed of validators that use renewable energy for their operations.
-
-Once the pool is established, Sunrise will direct stake to this pool, resulting in positive climate impact on both sides of the transaction:
-
-* Validators have an incentive to use renewable energy, reducing the carbon cost of the Solana network.
-* Stake yield is directed towards offsetting carbon emissions outside the solana network.
-
-### Where does the earned yield go?
-
-While the protocol is in development, yield remains in the protocol itself.
-
-In the future, yield will be directed to purchasing carbon offset tokens, which will be subsequently burned in order to retire the underlying carbon credits.
-
-Long-term, the decision of where to direct yield will be made by the community, governed by the [Sunrise Stake DAO](https://app.realms.today/realm/SunriseStake).
 
 ## Sunrise Stake treasury spending 
 
@@ -153,8 +135,6 @@ _NOTE_:
 Until sufficient liquidity is present on Solana for NCT, Sunrise is maintaining a reserve of bridged NCT, and is automatically burning from this pot at a fixed price.
 
 
-
-
 ## Governance
 :::tip
 
@@ -168,6 +148,7 @@ Sunrise Stake is governed by the [Sunrise Stake DAO](https://app.realms.today/re
 ### How can I propose a change?
 ### How can I vote?
 ### How can I delegate my vote?
+
 ## Security
 
 ### Will I lose custody of my SOL / private keys/ wallet?
@@ -176,9 +157,28 @@ Non-custodial means that your SOL is always under your control, you retain your 
 Permissionless means that the protocol can be used by you or anyone else, without any interaction from the Sunrise team.
 
 
+##FAQs
+### I am interested in integrating gSOL into my project, how can I do that?
+
+gSOL is a standard SPL token, and can be integrated into any project that supports SPL tokens.
+
+The gSOL token address is `gso12BFMxXD7RJaTUFfZZyuLW32M1hA9LoLZN7u9Und`.
+
+You can convert the gSOL back to SOL either by unstaking it manually in the Sunrise Stake app, through the upcoming JS library, or directly via the protocol itself.
+
+### I am a validator, how can I get involved?
+
+In conjunction with the [Solana Foundation](https://solana.org/), we are exploring establishing a green stake pool, composed of validators that use renewable energy for their operations.
+
+Once the pool is established, Sunrise will direct stake to this pool, resulting in positive climate impact on both sides of the transaction:
+
+* Validators have an incentive to use renewable energy, reducing the carbon cost of the Solana network.
+* Stake yield is directed towards offsetting carbon emissions outside the Solana network.
+
 ### Is Sunrise Stake audited?
 
 Audit is planned for early 2023. Stay tuned!
+
 ### Where is the source code?
 
 You can view (and submit pull-requests to) the source code on [GitHub](https://github.com/sunrise-stake).
