@@ -38,16 +38,16 @@ The gSOL to SOL ratio is always 1:1 thus stakers experience no fund loss in the 
 
 #### Transparent unstaking 
 
-The deposited stake retains full liquidity and can be traded back to SOL by  the user any time. At present, no fees (beyond the solana network fee of 5000 lamports) apply to unstaking high values when the user withdraws with a delay of 2-3 days, otherwise a fee of 0.3% is incurred for immediate withdrawals. This is done to secure sufficient liquidity of the staking pool. 
+The deposited stake retains full liquidity and can be traded back to SOL by  the user any time. At present, no fees (beyond the Solana network fee of 5000 lamports) apply to unstaking high values when the user withdraws with a delay of 2-3 days, otherwise a fee of 0.3% is incurred for immediate withdrawals. This is done to secure sufficient liquidity of the staking pool. 
 
 #### Liquid Staking
 Liquid staking is a method of staking that allows stakers to unstake without the typical 2-3 day withdrawal period.
-Sunrise proxies the [Marinade Finance](https://docs.marinade.finance/) protocol, which allows liquid staking through the use of liquidity pools.
+Sunrise proxies the [Marinade Finance](https://docs.marinade.finance/) and [SolBlaze] (https://stake-docs.solblaze.org/) protocols, which allows liquid staking through the use of liquidity pools.
 
-_NOTE_: In the future, Sunrise Stake aims at offering entirely feeless liquid unstaking. Sunrise will also proxy additional staking protocols.
+_NOTE: In the future, Sunrise Stake aims at offering entirely feeless liquid unstaking. Sunrise will also proxy additional staking protocols._
 
 #### Strengthening the Solana Ecosystem
-Our protocol also secures and decentralizes the Solana blockchain; staking your SOL with liquid staking protocols such as Marinade Finance and Solblaze means that your SOL is distributed to a wider network of validators.
+Our protocol also secures and decentralizes the Solana blockchain; staking your SOL with liquid staking protocols such as Marinade Finance and Solblaze means that your SOL is distributed to a wider network of validators. A more detailed explanation on staking and validators can be found in [Solana's docs] (https://solana.com/staking).
 
 #### The longer the staking, the higher the reward
 Keeping your SOL staked in Sunrise as long as possible maximises the climate-positive impact of your SOL, as well as the security of the Solana blockchain.
@@ -57,6 +57,7 @@ The decision to unstake is entirely up to the user however the accrued yield is 
 
 ### What are carbon tokens?
 Carbon tokens serve a similar purpose as carbon credits by allowing individuals and institutions to offset their carbon emissions by purchasing tokens from projects that decrease greenhouse gas emissions. When these tokens are burned, they are permanently removed from circulation and can no longer be used to offset carbon. Sunrise Stake realises climate impact by purchasing carbon tokens thanks to the yield accrued via staking. 
+
 
 ### How to Stake?
 Depositing your SOL via Sunrise Stake only takes only a few clicks:
@@ -105,7 +106,7 @@ Treasury Controller will stake your SOL in:
 
 _NOTE_: Sunrise Stake has future plans to integrate other non-custodial staking protocols (in addition to Marinade and SolBlaze).
  
-##### Stake Pool 
+##### Stake Pools 
 When Treasury Controller stakes your SOL in Marinade's stake pool, Marinade mints an amount of msOL tokens (Marinade Staked SOL tokens) representing the size of your holding of the stake pool, which is redeemable for SOL.
 
 For example, if Marinade's stake pool contains 20 SOL and the total minted mSOL is 10, then if you add 1 SOl, Marinade mints something like (1/20) * 10 = 0.5 mSOL. 
@@ -113,17 +114,29 @@ The stake pool size is now 21, you hold 0.5 out of a total 10.5 mSOL, so you own
 
 The staking process for SolBlaze is the same as above; when the Treasury Controller program stakes your SOL into BlazeStake's stake pool, Sunrise receives bSOL tokens (BlazeStake Staked SOL tokens) relative to your SOL's size of the stake pool. Just like mSOL, bSOL is redeemable for SOL.
 
+mSOL and bSOL accrue value 
+
 ##### Liquidity Pool 
 2.  A  mSOL/SOL unstake pool - through which Sunrise becomes a liquidity provider to Marinade
 The liquidity pool is made up of SOL, mSOL and Liquidity Pool tokens
 
   
-#### Step 3: Accruing yield on staked SOL
+#### Step 3: Accruing yield
+###### Stake Pools
+At the end of each epoch (every 2 or 3 days), yield gets paid out into stake accounts, and the value of the overall stake pool increases. 
+As mSOL and bSOL represent a share of their respective stake pools, the value of mSol and bSOL also increases.
 
-#### Step 4: Marinade sends minted mSOL to Treasury Controller
-i.e. Marinade “swaps” the SOL sent by Sunrise with the mSOL from Marinade’s Stake Pool
+The yield acrrued on the staked SOL, is equal to the value of mSOL and bSOL held by Sunrise minus the value of SOL staked (calculated as the circulatinbg supply of gSOL).
 
-                                                                                   
+###### Liquidity Pool
+
+
+### Unstaking
+If you unstake your SOL, Sunrise calculates how much mSOL to sell back to Marinade to receive your SOL
+For example, if you decides to unstake 1 SOL, Sunrise will calculate how much mSOL to sell to Marinade (and bSOL to sell back to BlazeStake), in order to receive back that 1 SOL.
+* Once the latest update is made to send staked SOL to the Marinade Liquidity Pool, Sunrise will be selling back a mix of mSOL and Liquidity Pool tokens to Marinade.
+
+                                                                    
 ## Sunrise Stake treasury spending 
 
 Thanks to the yield earned in the staking process, Sunrise can purchase carbon tokens and burn them to offset carbon emissions. 
@@ -176,13 +189,14 @@ Marinade and SolBlaze offer:
 
 #### Enhanced Decentralisation
 Usually when you stake SOL, your SOL is staked against to a single validator account, however Marinade and SolBlaze distribute staked SOL to a wide network of hundreds of validators (and growing!).
-Thus staking with Marinade and SolBlaze (and similar staking protocols) makes the Solana blockchain more decentralised, secure and censorship resistant, as it is harder for validators to stage a 51% attack or have control over how transactions are validated.
+Thus staking with Marinade and SolBlaze (and similar staking protocols) makes the Solana blockchain more decentralised, secure and censorship resistant, as it is harder for validators to stage a 51% attack or alter transactions.
 
 #### Liquid unstaking
 - This means users receive funds immediately
 - Normally unstaking is delayed - one has to wait until the end of the epoch (on average 2 days) to receive funds
 
 In the future, Sunrise plans to stake with other non-custodial liquid staking protocols.
+
 
 ### I am a validator, how can I get involved?
 
@@ -193,9 +207,11 @@ Once the pool is established, Sunrise will direct stake to this pool, resulting 
 * Validators have an incentive to use renewable energy, reducing the carbon cost of the Solana network.
 * Stake yield is directed towards offsetting carbon emissions outside the Solana network.
 
+
 ### Is Sunrise Stake audited?
 
 Audit is planned for early 2023. Stay tuned!
+
 
 ### Where is the source code?
 
