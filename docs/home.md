@@ -28,9 +28,10 @@ Regenerative economics is a theoretical framework for understanding and guiding 
 
 This approach to economics emphasizes the importance of building and maintaining healthy ecosystems and communities, and views economic activity as a means to that end rather than an end in itself.
 
-### What are the benefits of staking with Sunrise Stake?
+### Why stake with Sunrise Stake?
 
 #### Supporting carbon offset projects comes at no cost
+
 Users deposit their SOL with Sunrise Stake and receive gSOL (green SOL) in return as a wrapped token representing the total amount staked. 
 gSOL is a synthetic derivative of SOL, and can be used in the same way as SOL, by protocols or recipients that support it.
 For example, if you are asked to pay a recipient in SOL, you can pay them in gSOL instead. The recipient can then choose to either keep the gSOL, or unstake it and receive SOL.
@@ -87,7 +88,7 @@ Sunrise is focusing on carbon offsetting at present, however, in future we plan 
 including ones with more direct climate impact, such as reforestation projects.
 
 ### How to Stake?
-Depositing your SOL via Sunrise Stake only takes only a few clicks:
+Depositing your SOL via Sunrise Stake takes only a few clicks:
 
 1. Visit [the app](https://app.sunrisestake.com/) and connect your wallet.    
 2. Select the amount of SOL you want to stake.
@@ -102,14 +103,9 @@ The SOL will be locked in the smart contract until you unstake. You will receive
 2. Select the amount of gSOL you want to unstake.
 3. Click "Unstake" and confirm the transaction.
 
-:::caution
-
-While Sunrise is in development, unstaking incurs a fee from the
-underlying [Marinade Finance protocol](https://docs.marinade.finance/faq/faq#what-fees-does-marinade-charge).
-
-:::
-
 ## The Details
+
+![staking_unstaking.png](/img/staking_unstaking.png)
 
 ### A Deep Dive into the Staking Process
 Let’s take a deep dive into what happens when you deposit your SOL with Sunrise Stake
@@ -160,7 +156,9 @@ in order to maintain a 10% liquidity pool balance.
                                                                     
 ## Sunrise Stake treasury spending 
 
-Thanks to the yield earned in the staking process, Sunrise can purchase carbon tokens and burn them to offset carbon emissions. 
+Thanks to the yield earned in the staking process, Sunrise can purchase carbon tokens and burn them to offset carbon emissions.
+
+![v2_treasury_spending.png](/img/v2_treasury_spending.png)
 
 #### 1. Yield transfer to the treasury account
 
@@ -192,7 +190,6 @@ Until sufficient liquidity is present on Solana for NCT, Sunrise is maintaining 
 
 
 ## Governance
-:::tip
 
 ### How is Sunrise Stake governed?
 
