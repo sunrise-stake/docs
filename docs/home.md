@@ -222,7 +222,7 @@ Permissionless means that the protocol can be used by you or anyone else, withou
 
 gSOL is a standard SPL token, and can be integrated into any project that supports SPL tokens.
 
-The gSOL token address is `gso12BFMxXD7RJaTUFfZZyuLW32M1hA9LoLZN7u9Und`.
+The gSOL token address is [gso1xA56hacfgTHTF4F7wN5r4jbnJsKh99vR595uybA](https://explorer.solana.com/address/gso1xA56hacfgTHTF4F7wN5r4jbnJsKh99vR595uybA).
 
 You can convert the gSOL back to SOL either by unstaking it manually in the Sunrise Stake app, through the upcoming JS library, or directly via the protocol itself.
 
