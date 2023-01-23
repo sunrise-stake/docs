@@ -19,6 +19,7 @@ At Sunrise Stake we believe in the power of Regenerative Finance to create posit
 So we’ve created a non-custodial and permissionless protocol to send the yield earned through staking SOL towards retiring carbon tokens and other climate-positive projects.
 Sunrise Stake is one of the first ReFi projects on the Solana blockchain; we provide a seamless way for holders of SOL to participate in the ReFi movement, while simultaneously strengthening the Solana blockchain.
 
+![high_level_white.png](/img/high_level_white.png)
 
 ### What is ReFi?
 
@@ -40,7 +41,7 @@ The gSOL to SOL ratio is always 1:1 thus stakers experience no fund loss in the 
 #### Feeless Liquid Unstaking 
 
 Liquid staking is a method of staking that allows stakers to unstake without the typical 2-3 day withdrawal period.
-Sunrise proxies the [Marinade Finance](https://docs.marinade.finance/) and [SolBlaze] (https://stake-docs.solblaze.org/) protocols,
+Sunrise proxies the [Marinade Finance](https://docs.marinade.finance/) and [SolBlaze](https://stake-docs.solblaze.org/) protocols,
 which allow liquid staking through the use of liquidity pools.
 
 In Sunrise, unlike the underlying stake pools, users may withdraw their SOL instantly with no fee, 
@@ -90,14 +91,17 @@ including ones with more direct climate impact, such as reforestation projects.
 ### How to Stake?
 Depositing your SOL via Sunrise Stake takes only a few clicks:
 
+![stake.png](/img/screenshots/mini/stake.png)
+
 1. Visit [the app](https://app.sunrisestake.com/) and connect your wallet.    
 2. Select the amount of SOL you want to stake.
 3. Click "Stake" and confirm the transaction.
 
 The SOL will be locked in the smart contract until you unstake. You will receive the equivalent amount of gSOL, which you can either keep and unstake in the future, or trade with platforms that support it.
 
-
 ### How to Unstake?
+
+![unstake.png](/img/screenshots/mini/unstake.png)
 
 1. Visit [the app](https://app.sunrisestake.com/) and connect your wallet.
 2. Select the amount of gSOL you want to unstake.
@@ -105,12 +109,13 @@ The SOL will be locked in the smart contract until you unstake. You will receive
 
 ## The Details
 
-![staking_unstaking.png](/img/staking_unstaking.png)
-
 ### A Deep Dive into the Staking Process
 Let’s take a deep dive into what happens when you deposit your SOL with Sunrise Stake
 
 #### Step 1: Depositing SOL with Sunrise Stake
+
+![staking_white_without_comments.png](/img/staking_white_without_comments.png)
+
 The staking process begins with you depositing your SOL via Sunrise Stake’s app.
 
 Your SOL will be deposited into the underlying pools.
@@ -126,6 +131,9 @@ When you deposit your SOL, you will receive an equivalent amount of gSOL in your
 gSOL can be used in the same way as SOL, by protocols or recipients that support it.
   
 #### Step 2: Accruing yield
+
+![accruing_yield_white.png](/img/accruing_yield_white.png)
+
 ###### Stake Pools
 At the end of each epoch (every 2 or 3 days), yield gets paid out into stake accounts,
 and the value of the overall stake pool increases. 
@@ -143,7 +151,10 @@ The total value of the holdings of the Sunrise protocol are therefore:
 - The value of mSOL and bSOL held by Sunrise
 - The value of the liquidity pool tokens held by Sunrise
 
-### Unstaking
+### Step 3: Unstaking
+
+![unstaking_white_without_comments.png](/img/unstaking_white_without_comments.png)
+
 If you unstake your SOL, Sunrise calculates how much of its share of the underlying stake and liquidity pools to sell, in order to receive your SOL.
 
 Unstaking draws from the liquidity pool balance first, and then from the stake pool as needed.
@@ -153,12 +164,14 @@ Sunrise will withdraw 90 from the liquidity pool, and the remaining 10 from the 
 
 Sunrise will also trigger a "rebalancing" transaction, that moves SOL from the stake pool into the liquidity pool,
 in order to maintain a 10% liquidity pool balance.
+
+![rebalancing_white.png](/img/rebalancing_white.png)
                                                                     
 ## Sunrise Stake treasury spending 
 
 Thanks to the yield earned in the staking process, Sunrise can purchase carbon tokens and burn them to offset carbon emissions.
 
-![v2_treasury_spending.png](/img/v2_treasury_spending.png)
+![yield_controller_white_without_comments.png](/img/yield_controller_white_without_comments.png)
 
 #### 1. Yield transfer to the treasury account
 
