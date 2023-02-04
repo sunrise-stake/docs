@@ -173,14 +173,14 @@ Thanks to the yield earned in the staking process, Sunrise can purchase carbon t
 
 ![yield_controller_white_without_comments.png](/img/yield_controller_white_without_comments.png)
 
-#### 1. Yield transfer to the treasury account
+#### 1. Yield transfer to the yield account
 
-The yield earned from staking SOL is transferred to the __treasury account__.
+The yield earned from staking SOL is transferred to the __yield account__.
 
 It is a Program Derived Address ([PDA](https://docs.solana.com/developing/programming-model/calling-between-programs#program-derived-addresses))
 meaning that it is owned and controlled by a smart contract, not a private key.
 
-This smart contract is known as the __treasury controller__.
+This smart contract is known as the __yield controller__.
 It can trigger a state change to buy or burn carbon tokens, thus retiring underlying carbon credits.
 
 #### 2. Purchasing carbon tokens
