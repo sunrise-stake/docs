@@ -59,7 +59,7 @@ who do not need their funds immediately, as it avoids spending some of the earne
 and therefore maximizes the amount of yield that is sent to the climate-positive projects.
 
 #### Strengthening the Solana Ecosystem
-Our protocol also secures and decentralizes the Solana blockchain; staking your SOL with liquid staking protocols such as Marinade Finance and Solblaze means that your SOL is distributed to a wider network of validators. A more detailed explanation on staking and validators can be found in [Solana's docs] (https://solana.com/staking).
+Our protocol also secures and decentralizes the Solana blockchain; staking your SOL with liquid staking protocols such as Marinade Finance and Solblaze means that your SOL is distributed to a wider network of validators. A more detailed explanation on staking and validators can be found in [Solana's docs](https://solana.com/staking).
 
 #### The longer the staking, the higher the reward
 Keeping your SOL staked in Sunrise as long as possible maximises the climate-positive impact of your SOL, as well as the security of the Solana blockchain.
@@ -121,11 +121,11 @@ The staking process begins with you depositing your SOL via Sunrise Stake’s ap
 Your SOL will be deposited into the underlying pools.
 
 The majority of the SOL is deposited into a set of [Stake Pools](https://solana.org/stake-pools).
-At present, Sunrise Stake deposits into the [Marinade Finance](https://docs.marinade.finance/) and [SolBlaze] (https://stake-docs.solblaze.org/) pools.
+At present, Sunrise Stake deposits into the [Marinade Finance](https://docs.marinade.finance/) and [SolBlaze](https://stake-docs.solblaze.org/) pools.
 The stake pool tokens (mSOL and bSOL) will be held by the protocol in a [Program Derived Address (PDA)](https://docs.solana.com/developing/programming-model/calling-between-programs#program-derived-addresses).
 
 A proportion of the deposited SOL is also deposited into the [Marinade Unstake Pool](https://docs.marinade.finance/marinade-protocol/system-overview/unstake-liquidity-pool).
-This pool is used during the unstaking process to provide feeless unstaking, ensuring that users can withdraw their SOL at any time without incurring a fee.
+This pool is used during the unstaking process to provide fee-less unstaking, ensuring that users can withdraw their SOL at any time without incurring a fee.
 
 When you deposit your SOL, you will receive an equivalent amount of gSOL in your wallet.
 gSOL can be used in the same way as SOL, by protocols or recipients that support it.
@@ -138,7 +138,7 @@ gSOL can be used in the same way as SOL, by protocols or recipients that support
 At the end of each epoch (every 2 or 3 days), yield gets paid out into stake accounts,
 and the value of the overall stake pool increases. 
 
-As mSOL and bSOL represent a share of their respective stake pools, the value of mSol and bSOL also increases.
+As mSOL and bSOL represent a share of their respective stake pools, the value of mSOL and bSOL also increases.
 
 The yield accrued on the staked SOL is equal to the value of mSOL and bSOL held by Sunrise
 minus the value of SOL staked (calculated as the circulating supply of gSOL).
