@@ -1,5 +1,7 @@
 ---
 slug: /spending
+sidebar_position: 4
+sidebar_label: Spending Yield
 ---
 
 # Spending Yield

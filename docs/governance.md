@@ -1,5 +1,7 @@
 ---
 slug: /governance
+sidebar_position: 3
+sidebar_label: Governance
 ---
 
 # Governance
