@@ -2,12 +2,12 @@
 slug: /details
 ---
 
-## The Details
+# The Details
 
-### A Deep Dive into the Staking Process
+## A Deep Dive into the Staking Process
 Let’s take a deep dive into what happens when you deposit your SOL with Sunrise Stake
 
-#### Step 1: Depositing SOL with Sunrise Stake
+### Step 1: Depositing SOL with Sunrise Stake
 
 ![staking_white_without_comments.png](/img/staking_white_without_comments.png)
 
@@ -25,11 +25,11 @@ This pool is used during the unstaking process to provide fee-less unstaking, en
 When you deposit your SOL, you will receive an equivalent amount of gSOL in your wallet.
 gSOL can be used in the same way as SOL, by protocols or recipients that support it.
 
-#### Step 2: Accruing yield
+### Step 2: Accruing yield
 
 ![accruing_yield_white.png](/img/accruing_yield_white.png)
 
-###### Stake Pools
+##### Stake Pools
 At the end of each epoch (every 2 or 3 days), yield gets paid out into stake accounts,
 and the value of the overall stake pool increases.
 
@@ -38,7 +38,7 @@ As mSOL and bSOL represent a share of their respective stake pools, the value of
 The yield accrued on the staked SOL is equal to the value of mSOL and bSOL held by Sunrise
 minus the value of SOL staked (calculated as the circulating supply of gSOL).
 
-###### Liquidity Pool
+##### Liquidity Pool
 
 The Marinade Unstake Pool also accrues yield through fees from the marinade liquid unstaking feature.
 The total value of the holdings of the Sunrise protocol are therefore:
@@ -46,7 +46,7 @@ The total value of the holdings of the Sunrise protocol are therefore:
 - The value of mSOL and bSOL held by Sunrise
 - The value of the liquidity pool tokens held by Sunrise
 
-### Step 3: Unstaking
+## Step 3: Unstaking
 
 ![unstaking_white_without_comments.png](/img/unstaking_white_without_comments.png)
 
