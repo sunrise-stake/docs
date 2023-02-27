@@ -1,3 +1,7 @@
+---
+slug: /security
+---
+
 ## Security
 
 ### Will I lose custody of my SOL / private keys/ wallet?

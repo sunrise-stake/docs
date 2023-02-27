@@ -1,3 +1,7 @@
+---
+slug: /faq
+---
+
 ## Other Questions
 ### I am interested in integrating gSOL into my project, how can I do that?
 

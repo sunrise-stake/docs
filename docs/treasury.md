@@ -1,3 +1,7 @@
+---
+slug: /spending
+---
+
 ## Sunrise Stake treasury spending
 
 Thanks to the yield earned in the staking process, Sunrise can purchase carbon tokens and burn them to offset carbon emissions.

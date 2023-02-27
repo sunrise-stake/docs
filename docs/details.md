@@ -1,3 +1,7 @@
+---
+slug: /details
+---
+
 ## The Details
 
 ### A Deep Dive into the Staking Process

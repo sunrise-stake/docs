@@ -1,3 +1,7 @@
+---
+slug: /governance
+---
+
 ## Governance
 
 ### How is Sunrise Stake governed?
