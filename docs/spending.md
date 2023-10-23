@@ -72,7 +72,18 @@ The steps are as follows:
    6b. Converts the NCT to tCO2 tokens using Toucan contracts
    6c. Retires the tCO2 to the project specified in the Holding Contract
    6d. Sends the resultant retirement certificate NFT to the Holding Contract
-7. The Holding Contract then bridges the NFT back through Wormhole, resulting in a retirmenet certificate NFT on Solana
+7. The Holding Contract then bridges the NFT back through Wormhole, resulting in a retirement certificate NFT on Solana
+
+The Offset Bridge can be used by any Solana users to buy and retire carbon credits and retrieve the resultant
+retirement certificate NFT.
+
+Sunrise Stake uses a Holding Contract configured to retire to high-impact projects,
+such as the [Mai Ndombe REDD+](https://registry.verra.org/app/projectDetail/VCS/934)
+[lighthouse](https://verra.org/six-verra-projects-receive-prestigious-honor/) project.
+
+The target project is managed by Sunrise Stake, and can be changed by the Sunrise team.
+In future, it is expected that the management of the Holding Contract,
+and other configuration of the yield controller, will be moved to an independent governance team.
 
 More details for the Offset Bridge can be found at https://github.com/sunrise-stake/offset-bridge.
 
