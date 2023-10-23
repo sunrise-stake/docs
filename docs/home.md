@@ -84,7 +84,7 @@ in climate projects while retaining the ability to unstake their SOL at any poin
 Carbon tokens serve a similar purpose as carbon credits by allowing
 individuals and institutions to offset their carbon emissions.
 
-Sunrise uses the [Toucan NCT Carbon Token](https://blog.toucan.earth/announcing-nct-nature-carbon-tonne/).
+Sunrise uses the [Toucan NCT Carbon Token](https://blog.toucan.earth/announcing-nct-nature-carbon-tonne/), with more carbon tokens coming online in Q3 2023.
 
 Each token represents 1 tonne of CO2 equivalent, Burning a token permanently retires the underlying carbon credit.
 

@@ -39,7 +39,7 @@ Once the pool is established, Sunrise will direct stake to this pool, resulting 
 
 ## Is Sunrise Stake audited?
 
-Audit is planned for early 2023. Stay tuned!
+Audit is planned for 2023. Stay tuned!
 
 
 ## Where is the source code?
