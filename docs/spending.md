@@ -37,7 +37,7 @@ to a number of target `input accounts`.
 
 Each input account is a PDA owned by a given target program.
 
-## 3. Currently-supported Targets
+## 3. Targets
 
 ### 3.1 Toucan Nature Carbon Tonne
 
