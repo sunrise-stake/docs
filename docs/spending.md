@@ -6,7 +6,8 @@ sidebar_label: Spending Yield
 
 # Spending Yield
 
-The yield earned by the Sunrise Stake platform is spent on climate-positive projects. 
+The yield earned by the third-party Stake Pools  is spent on climate-positive projects.
+
 The system that controls the spending of yield is called the [Yield Controller](https://github.com/sunrise-stake/yield-controller).
 
 The Yield Controller is responsible for:
@@ -18,13 +19,14 @@ The Yield Controller is responsible for:
 
 ## 1. Yield transfer to the yield account
 
-The yield earned from staking SOL is transferred to the [__yield account__](https://solscan.io/account/6HQrvpMJFqMj35JqMReyhnUrRXNucAAB6FywdDu7xPKA).
+The yield you earn by staking SOL is transferred to the [__yield account__](https://solscan.io/account/6HQrvpMJFqMj35JqMReyhnUrRXNucAAB6FywdDu7xPKA).
 
 It is a Program Derived Address ([PDA](https://docs.solana.com/developing/programming-model/calling-between-programs#program-derived-addresses))
-meaning that it is owned and controlled by a smart contract (the yield controller), not a private key.
+meaning that it is owned and controlled by a smart contract (the yield controller), not a private key nor anyone behind Sunrise Stake.
 
-The yield account is specified in the [state](https://solana.fm/address/43m66crxGfXSJpmx5wXRoFuHubhHA1GCvtHgmHW6cM1P/anchor-account)
-of the Sunrise program (labelled 'treasury'). The permissionless `extract_yield` instruction transfers any accrued yield to this account.
+The yield account is specified in the [state](https://solana.fm/address/43m66crxGfXSJpmx5wXRoFuHubhHA1GCvtHgmHW6cM1P/anchor-account) of the Sunrise program.
+
+The permissionless `extract_yield` instruction transfers any accrued yield to this account.
 
 ## 2. Splitting to targets
 
@@ -41,7 +43,7 @@ Each input account is a PDA owned by a given target program.
 
 ### 3.1 Toucan Nature Carbon Tonne
 
-Sunrise Stake currently spends its yield by buying and retiring the Toucan Nature Carbon Tonne (NCT) token.
+Sunrise Stake currently donates your yield by buying and retiring the Toucan Nature Carbon Tonne (NCT) token.
 
 NCT represents a tonne of CO2 or equivalent greenhouse gas removed from the atmosphere in various nature-based projects.
 It is issued on the Polygon and Celo blockchains.
@@ -91,7 +93,7 @@ More details for the Offset Bridge can be found at https://github.com/sunrise-st
 
 ### 3.2 ecoToken
 
-Starting in Q4 2023, Sunrise Stake will also be sending a portion of its funds to [ecoToken](https://eco-token.io/),
-a Solana-native project that issues a variety of eco-credits.
+A portion of your donated staking rewards is also sent to [ecoToken](https://eco-token.io/), a Solana-native project that issues a variety of eco-credits.
 
-ecoToken is linked with Regen Network, that certifies the credits.
+ecoToken bridges carbon credits from [Regen Network](https://www.regen.network/), which certifies and issues them.
+
